@@ -1,0 +1,18 @@
+=== iq3s-dual-0141 COLD-prompt bench on :8080  reps=3 ===
+  [calibrate] 58400 words -> 68811 tokens  (ratio 1.178 tok/word)
+  ctx  4096 run1: [COLD] PP   484.0 t/s (3092 tok, 6388.6 ms) | DEC  15.7 t/s (43 tok) | draft 29/33 (0.879) | ttft 135.93s | util 44.0%
+  ctx  4096 run2: [COLD] PP   499.6 t/s (3092 tok, 6188.4 ms) | DEC  44.2 t/s (43 tok) | draft 29/34 (0.853) | ttft 19.39s | util 79.3%
+  ctx  4096 run3: [COLD] PP   492.3 t/s (3092 tok, 6280.7 ms) | DEC  32.6 t/s (43 tok) | draft 27/31 (0.871) | ttft 118.25s | util 47.2%
+  ctx 32768 run1: [COLD] PP  1505.4 t/s (23426 tok, 15561.0 ms) | DEC  35.6 t/s (41 tok) | draft 25/31 (0.806) | ttft 69.41s | util 58.3%
+  ctx 32768 run2: [COLD] PP  1521.1 t/s (24596 tok, 16170.3 ms) | DEC  49.1 t/s (256 tok) | draft 146/222 (0.658) | ttft 69.69s | util 35.8%
+  ctx 32768 run3: [COLD] PP  1523.3 t/s (24596 tok, 16146.2 ms) | DEC  37.7 t/s (43 tok) | draft 27/34 (0.794) | ttft 32.65s | util 61.0%
+  ctx131072 run1: [COLD] PP  1890.7 t/s (95978 tok, 50762.4 ms) | DEC  50.0 t/s (256 tok) | draft 120/216 (0.556) | ttft 165.61s | util 44.5%
+  ctx131072 run2: [COLD] PP  1892.2 t/s (95978 tok, 50722.0 ms) | DEC  54.7 t/s (256 tok) | draft 137/238 (0.576) | ttft 82.54s | util 34.7%
+  ctx131072 run3: [COLD] PP  1904.9 t/s (98318 tok, 51612.4 ms) | DEC  33.2 t/s (43 tok) | draft 28/42 (0.667) | ttft 192.57s | util 36.2%
+
+=== AGGREGATE (cold runs only) ===
+  ctx   4096 (n=3): PP median   492.3 t/s [484-500] | DEC median  32.6 t/s [16-44] | draft 0.871
+  ctx  32768 (n=3): PP median  1521.1 t/s [1505-1523] | DEC median  37.7 t/s [36-49] | draft 0.794
+  ctx 131072 (n=3): PP median  1892.2 t/s [1891-1905] | DEC median  50.0 t/s [33-55] | draft 0.576
+
+saved: ~/strata-bench/iq3s-dual-0141-cold/results.json
